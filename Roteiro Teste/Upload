@@ -1,0 +1,15 @@
+
+Para podermos automatizar a resposta de formulários que solicitam
+uploads de arquivos utilizando Cypress e plug-ins teremos alguns passos a seguir:
+1 Passo: instalar o cypress upload dev dependency.
+O pacote é via npm e deve ser instalado em seu projeto pelo seguinte comando:
+npm install --save-dev cypress-file-upload
+2 Passo: colocar o commando importer cypress-file-upload dentro da pasta command.js do seu projeto.
+Import  ‘cypress-file-upload’;
+3 Passo : Colocar o arquivo desejado para upload dentro da pasta fixture.
+Após é seguir o código como exemplo.
+
+***
+const yourFixturePath = ' data.json ' ;   
+cy . get ( ' [data-cy = "file-input"] ' ) . attachFile ( yourFixturePath ) ;
+***
